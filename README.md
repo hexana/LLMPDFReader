@@ -33,11 +33,11 @@ Pip install sentencepiece
 pip install langchain-community
 
 7.	Now the problem I faced was to download the model and execute. I used the code which is available at model page in huggingface site:
+   
 from huggingface_hub import snapshot_download
 from pathlib import Path
 mistral_models_path = Path.home().joinpath('mistral_models', '7B-v0.3')
 mistral_models_path.mkdir(parents=True, exist_ok=True)
-
 snapshot_download(repo_id="mistralai/Mistral-7B-v0.3", allow_patterns=["params.json", "consolidated.safetensors", "tokenizer.model.v3"], local_dir=mistral_models_path)
 
 First you need to login to hugginface cli then only this download works and later the problem will occur. Once you try to use model (with the correct path where you installed the model) the program  will always throw
