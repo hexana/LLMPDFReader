@@ -27,10 +27,10 @@ Go to the token→edit permission  and provide access.
 4.	Install python >=3.9 if you don’t have one already. 
 5.	Install hugging face hub and cli using pip - pip install -U "huggingface_hub[cli]"
 6.	Install below packages:
-Pip install transformers
-Pip install protobuf
-Pip install sentencepiece
-pip install langchain-community
+	Pip install transformers
+	Pip install protobuf
+	Pip install sentencepiece
+	pip install langchain-community
 
 7.	Now the problem I faced was to download the model and execute. I used the code which is available at model page in huggingface site:
    
@@ -46,11 +46,12 @@ Can't load tokenizer If you were trying to load it from ‘Models - Hugging Face
 how to login to huggingface cli? In one of the setup, I was able to without any issues with command huggingface-cli login. In another setup (on mac), I had to run the command echo "export PATH=\"`python3 -m site --user-base`/bin:\$PATH\"" >> ~/.bashrc
 source ~/.bashrc
 and then called  huggingface-cli login.This will ask huggingface api token.
-8.	On the same terminal, where you logged in to  huggingface-cli,  download the model and tokenizer. Use the code I have attached in git LLMDownloader.py, change the path where you want to save the model and tokenizer. Run using 
+
+8.On the same terminal, where you logged in to  huggingface-cli,  download the model and tokenizer. Use the code I have attached in git LLMDownloader.py, change the path where you want to save the model and tokenizer. Run using 
 Python LLMDownloader.py  
 The path will be used in another file to use the downloaded model. Notice we can change the default path for hugging face home, which is under ./cache for model, dataset etc.
 
-9.	Now use the code PDFQA.py to get answers from pdf.  Update the code for the location of pdf files as well as for the model and tokenizer file. You can notice how the tokenizer and model are used in this file. I am not going into details of each method/code as there is already plenty of material available online. 
+9.Now use the code PDFQA.py to get answers from pdf.  Update the code for the location of pdf files as well as for the model and tokenizer file. You can notice how the tokenizer and model are used in this file. I am not going into details of each method/code as there is already plenty of material available online. 
 
 
 Hope you will be able to execute a LLM model for your project.
