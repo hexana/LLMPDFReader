@@ -40,7 +40,9 @@ mistral_models_path.mkdir(parents=True, exist_ok=True)
 
 snapshot_download(repo_id="mistralai/Mistral-7B-v0.3", allow_patterns=["params.json", "consolidated.safetensors", "tokenizer.model.v3"], local_dir=mistral_models_path)
 
-First you need to login to hugginface cli then only this download works and later the problem will occur. Once you try to use model (with the correct path where you installed the model) the program  will always throw Can't load tokenizer If you were trying to load it from ‘Models - Hugging Face’, make sure you don’t have a local directory with the same name.
+First you need to login to hugginface cli then only this download works and later the problem will occur. Once you try to use model (with the correct path where you installed the model) the program  will always throw
+Can't load tokenizer If you were trying to load it from ‘Models - Hugging Face’, make sure you don’t have a local directory with the same name.
+
 how to login to huggingface cli? In one of the setup, I was able to without any issues with command huggingface-cli login. In another setup (on mac), I had to run the command echo "export PATH=\"`python3 -m site --user-base`/bin:\$PATH\"" >> ~/.bashrc
 source ~/.bashrc
 and then called  huggingface-cli login.This will ask huggingface api token.
